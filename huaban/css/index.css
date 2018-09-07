@@ -1,0 +1,760 @@
+	*{
+		margin:0;padding:0
+	}
+	body{
+		font-family: "helvetica neue",arial,sans-serif;
+		font-size: 14px;
+    	color: #444;
+    	background-color: rgba(101,101,101,0.2);
+    }
+    html,body{
+    	width: 100%;
+    	height: 100%;
+    }
+	a{
+		text-decoration: none;
+	}
+	li{
+		list-style-type: none;
+	}
+/*头部*/
+	header{
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	header>div{
+		width: 100%;
+		height: 480px;
+		position: relative;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	header .nav{
+		width: 100%;
+		height: 48px;
+		position: fixed;
+		z-index: 3;
+		margin: 0 auto;
+	}
+	header nav{
+		width: 1500px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -750px;
+	}
+	header nav .top-nav{
+		width: 660px;
+		height: 100%;
+		float: left;
+		margin-top: 10px;
+	}
+	header nav a{
+		color: #fff;
+	}
+	header nav .top-nav>li{
+		float: left;
+		width: 28px;
+		height: 29px;
+		margin-left: 25px;
+	}
+	header nav .top-nav>li>a{
+		width: 100%;
+		height: 100%;
+		line-height: 29px;
+		display: inline-block;
+	}
+	header nav .top-nav>li:hover{
+		border-bottom: 1px solid #fff;
+	}
+	header nav .top-nav>li:nth-child(1){
+		width: 80px;
+		height: 28px;
+		border: none;
+		background-image: url(../images/logo.png);
+	}
+	header nav .top-nav li:nth-child(1) a h1{
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+	}
+	header nav .top-nav>li:nth-child(2){
+		border-bottom: 1px solid #fff;
+	}
+	header nav .top-nav>li:nth-child(5){
+		width: 40px;
+		height: 40px;
+		background-image: url(../images/jlt.png);
+		background-position: -50px -558px;
+		border: none;
+		border-right: 1px solid #fff;
+		position: relative;
+	}	
+	header nav .top-nav>li:nth-child(5):hover .section{
+		display: block;
+	}
+	header nav .top-nav li:nth-child(5)>a{
+		line-height: 20px;
+	}
+	header nav .top-nav>li:nth-child(8){
+		width: 60px;
+		background-image: url(../images/new.png);
+		background-position: 30px 7px;
+		background-repeat: no-repeat;
+	}
+	header nav .top-nav>li:nth-child(10){
+		width: 56px;
+	}
+	header nav .register{
+		width: 130px;
+		height: 100%;
+		float: right;
+		margin-top: 10px;
+	}
+	header nav>div>a{
+		width: 49px;
+		height: 34px;
+		display: inline-block;
+		text-align: center;
+		line-height: 34px;
+		border: 1px solid #fff;
+		box-sizing: border-box;
+	}
+	header nav>div>a:nth-child(2){
+		background-color: rgb(236,65,77);
+		border: none;
+	}
+	header nav>div>a:nth-child(2):hover{
+		background-color: rgb(227,22,36);
+	}
+	header .search{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -270px;
+		margin-top: -80px;
+	}
+	header .search h2{
+		width: 540px;
+		height: 54px;
+		font-size: 44px;
+		color: #fff;
+		margin-bottom: 40px;
+		display: inline-block;
+	}
+	header .search form{
+		width: 536px;
+		height: 40px;
+		background-color: #fff;
+		position: relative;
+	}
+	header .search form input{
+		width: 514px;
+		height: 38px;
+		padding-left: 10px;
+		border: none;
+		outline: none;
+		color: #444;
+		box-sizing: border-box;
+	}
+	header .search form a{
+		width: 40px;
+		height: 40px;
+		background-image: url(../images/search.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 9px;
+		right: 0;
+	}
+	header .search  p{
+		margin-top: 10px;
+		width: 100%;
+		height: 16px;
+		color: #fff;
+	}
+	header .search  p span{
+		color: rgba(255,255,255,0.7);
+	}
+	header .search  p a{
+		color: #fff;
+	}
+	header .search  p a:hover{
+		text-decoration: underline;
+	}
+	header .search  p i{
+		color: rgba(255,255,255,0.7);
+	}
+	header .source{
+		width: 100%;
+		height: 16px;
+		position: absolute;
+		left: 0;
+		bottom: 20px;
+		text-align: right;
+	}
+	header .source span{
+		color: #fff;
+	}
+	header .source a{
+		color: #fff;
+		margin-right: 100px;
+	}
+	header .source a:hover{
+		text-decoration: underline;
+	}
+	header .section{
+		width: 270px;
+		padding: 20px 20px 0;
+		position: absolute;
+		top: 50px;
+		left: -128px;
+		z-index: 3;
+		background-color: #fff;
+		display: none;
+
+	}
+	header .section .arrow{
+		display: inline-block;
+		width: 100%;
+		height: 40px;
+		position: absolute;
+		top: -10px;
+		left: 130px;
+		background-image: url(../images/arrow.png);
+		background-repeat: no-repeat;
+	}
+	header .section div{
+		width: 100%;
+		position: relative;
+	}
+	header .section a:hover{
+		color: rgb(201,0,0)
+	}	
+	header .section div .top{
+		height: 23px;
+		margin-bottom: 15px;
+    	padding-bottom: 15px;
+    	border-bottom: 1px solid #ddd;
+	}
+	header .section div .top a{
+		float: left;
+		text-align: center;
+		width: 90px;
+		font-size: 16px;
+		line-height: 16px;
+		color: #222;
+		font-weight: 700;	
+	}
+	header .section div ul{
+		width: 100%;
+		height: 90px;
+		padding-bottom: 50px;
+		border-bottom: 1px solid #ddd;
+	}
+	header .section div ul li{
+		width: 40%;
+		height: 25px;
+		float: left;
+		margin-left: 25px;
+	}
+	header .section div ul li a{
+		line-height: 25px;
+		color: #222;
+	}
+	header .section div ul li:nth-last-child(1) a{
+		font-weight: 700;
+	}
+	header .section div .bottom{
+		width: 100%;
+		height: 47px;
+		position: relative;
+	}
+
+	header .section div .bottom span{
+		display: inline-block;
+		width: 26px;
+		height: 26px;
+		background-image: url(../images/jlt.png);
+		background-position: 7px -302px;
+		border: 1px solid #ededed;
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		opacity: 0.7;
+	}
+	header .section div .bottom span:hover{
+		opacity: 1;
+		background-position: -43px -302px;
+    	border-color: #ddd;
+	}
+	header .section div .bottom a{
+		height: 20px;
+		color: #999;
+		float: right;
+		margin-left: 10px;
+		margin-top: 15px;
+	}
+	header .section div .bottom a:hover{
+		text-decoration: underline;
+	}
+	header .head-ad{
+		width: 100%;
+		height: 60px;
+		position: relative;
+	}
+	header .head-ad a{
+		display: inline-block;
+		width: 100%;
+		height: 60px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	header .head-ad span{
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-image: url(../images/close.png);
+		opacity: 0;
+		cursor: pointer;
+	}
+	header .head-ad:hover span{
+		opacity: 1;
+		background-position:left bottom;
+	}
+/*中部*/
+	content{
+		width: 100%;
+		display: block;
+
+	}	
+	content .Aarea {
+		width: 1500px;
+		margin: 0 auto;
+		position: relative;
+	}
+	content section h3{
+		padding: 20px 0;
+		text-align: center;
+	}
+	content section h3 a{
+		font-size: 16px;
+		color: #999;
+	}
+	content .Aarea h3::before{
+    	position: absolute;
+    	top: 28px;
+    	left: 0;
+    	width: 44%;
+    	content: "";
+    	border-top: 1px solid #ededed;
+	}
+	content .Aarea h3::after{
+    	position: absolute;
+    	top: 28px;
+    	right: 0;
+    	width: 44%;
+    	content: "";
+    	border-top: 1px solid #ededed;
+	}
+	content .Aarea p{
+		width: 100%;
+		height: 170px;
+		display: flex;
+		justify-content: space-between;
+	}
+	content .Aarea p a{
+		width: 230px;
+		height: 170px;
+	}
+	content .Aarea p a img{
+		width: 230px;
+	}
+	content .Barea{
+		width: 1500px;
+		height: 2000px;
+		overflow: hidden;
+		margin: 0 auto;
+		position: relative;
+	}
+	content .Barea h3 a{
+		margin-left: 20px;
+		display: inline-block;
+	}
+	.selected{
+		color: orange;
+		border-bottom: 1px solid orange;
+	}
+	content .Barea ul{
+		width: 100%;
+		position: relative;	
+	}
+	content .Barea ul .view{
+		width: 100%;
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	content .Barea ul .view .box{
+		width: 235px;
+		float: left;
+		border: 1px solid #000;
+		box-shadow: 2px 2px 1px #000;
+	}
+	content .Barea ul .view .box::after{
+		clear: both;
+   		overflow: hidden;
+    	height: 0;
+    	content: "";
+    	display: block;
+	}
+	content .Barea ul .view .box .box-top{
+		width: 100%;
+		position: relative;
+	}
+	content .Barea ul .view .box .box-top:hover .cover{
+		display: block;
+	}
+	content .Barea ul .view .box .box-top:hover .collect{
+		display: block;
+	}
+	content .Barea ul .view .box .box-top:hover .like{
+		display: block;
+	}
+	content .Barea ul .view .box .box-top .pic{
+		width: 100%;
+		display: inline-block;
+	}
+	content .Barea ul .view .box .box-top .pic img{
+		width: 100%;
+		display: inline-block;
+	}
+	content .Barea ul .view .box .box-top .cover{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(250,250,250,0.5);
+		display: none;
+	}
+	content .Barea ul .view .box .box-top span{
+		position: absolute;
+		top: 10px;
+		height: 33px;
+		border-radius: 2px;
+		cursor: pointer;
+	}
+	content .Barea ul .view .box .box-top .collect{
+		left: 10px;
+		width: 54px;
+		color: #fff;
+		line-height: 33px;
+		text-align: center;
+		font-size: 14px;
+		background-color: #EC414D;
+		border: 1px solid #EC414D;
+		display: none;
+	}
+	content .Barea ul .view .box .box-top .like{
+		right: 10px;
+		width: 33px;
+		background-image: url(../images/like.png);
+		background-repeat: no-repeat;
+		background-position: 11px 10px;
+		background-color: #fff;
+		display: none;
+	}
+	content .Barea ul .view .box .box-bottom{
+		width: 100%;
+		padding: 2px 0 5px 0;
+	}
+	content .Barea ul .view .box .box-bottom::after{
+		clear: both;
+   		overflow: hidden;
+    	height: 0;
+    	content: "";
+    	display: block;
+	}
+	content .Barea ul .view .box .box-bottom>p{
+		font-size: 12px;
+		word-wrap: break-word;
+		width: 100%;
+		padding: 0 10px 5px 10px;
+	}
+	content .Barea ul .view .box .box-bottom a{
+		display: inline-block;
+		font-size: 12px;
+		line-height: 17px;
+		color: #9E7E6B;
+		height: 17px;
+		float: left;
+		margin-left: 10px;
+	}
+	content .Barea ul .view .box .box-bottom a:hover{
+		text-decoration: underline;
+	}
+	content .Barea ul .view .box .box-bottom .user-head{
+		background-image: url(../images/user2.jpg);
+		background-size: cover;
+		width: 34px;
+		height: 34px;
+	}
+	content .Barea ul .view .box .box-bottom .photography{
+		width: 150px;
+		
+	}
+	content .Barea ul .view .box .box-bottom .txt{
+		float: left;
+		color: #999;
+		margin-left: 10px;
+		font-size: 12px;
+	}
+/*底部*/
+	footer{
+		width: 100%;
+		height: auto;
+		display: block;	
+		padding-top: 20px;
+		background-color: #333;
+		position: relative;
+	}
+	footer div{
+		width: 1500px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;	
+	}
+	footer div ul{
+		color: #ddd;
+	}
+	footer div ul li{
+		padding-bottom: 15px;
+	}
+	footer div ul li a{
+		font-size: 14px;
+		color: #ddd;
+	}
+	footer div ul li a:hover{
+		color: #fff;
+	}
+	footer div ul li:nth-child(1){
+		padding-bottom: 20px;
+	}
+	footer div ul li:nth-child(1):hover h3{
+		color: #fff;
+	}
+	footer div ul li:nth-child(1) h3{
+		font-size: 16px;
+		color: #ddd;
+	}
+	footer div ul li .ewm{
+		position: absolute;
+		right: 80px;
+		bottom: 70px;
+		display: none;
+	}
+	footer div ul li .icon:hover+img{
+		display: block;
+	}
+	footer p{
+		width: 100%;
+		height: 60px;
+		margin: 0 auto;
+		text-align: center;
+		background-color: #000;
+		font-size: 18px;
+		line-height: 60px;
+	}
+/*侧边栏*/
+	aside{
+		width: 40px;
+		height: 120px;
+		position: fixed;
+		right: 20px;
+		bottom: 80px;
+		box-shadow: 1px 1px 1px #000;
+		display: none;
+	}
+	aside ul{
+		width: 100%;
+		height: 100%;
+
+	}
+	aside ul li{
+		width: 40px;
+		height: 40px;	
+	}
+	aside ul li a{
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.6);
+		display: inline-block;
+		background-image: url(../images/aside.png);
+		background-repeat: no-repeat;
+	}
+	aside ul li:nth-child(1) a{		
+		background-position: 8px 6px;
+	}
+	aside ul li:nth-child(2) a{
+		background-position: 8px -74px;
+	}
+	aside ul li:nth-child(3) a{
+		background-position: 8px -34px;
+	}
+	.login{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 4;
+		background-color: rgba(255,255,255,0.3);
+		display: none;
+	}
+	.login div{
+		width: 520px;
+		height: 420px;
+		background-color: #fff;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: -210px 0 0 -260px;
+		padding: 30px 0 20px 0;
+		box-sizing: border-box;
+	}
+	.login div h2{
+		width: 100%;
+		height: 36px;
+		text-align: center;
+	}
+	.login div h2 img{
+		height: 36px;
+	}
+	.login div .login-way{
+		width: 100%;
+		height: 21px;
+		font-size: 16PX;
+		color: #999;
+		text-align: center;
+		margin-top: 20px;
+		position: relative;
+	}
+	.login div .login-way::before{
+		content: "";
+	    border-top: 1px solid #ededed;
+	    display: block;
+	    position: absolute;
+	    width: 50px;
+	    top: 10px;
+	    left: 130px;
+	}
+	.login div .login-way::after{
+		content: "";
+	    border-top: 1px solid #ededed;
+	    display: block;
+	    position: absolute;
+	    width: 50px;
+	    top: 10px;
+	    right: 130px;
+	}
+	.login div .icons{
+		width: 100%;
+		height: 51px;
+		margin: 15px 117px 20px 117px;
+	}
+	.login div .icons a{
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		margin-right: 10px;
+		background-image: url(../images/icons.png);
+		background-repeat: no-repeat;
+	}
+	.login div .icons a:hover{
+		background-position: 0 -80px;
+	}
+	.login div .login-email{
+		width: 100%;
+		height: 21px;
+		font-size: 16PX;
+		color: #999;
+		text-align: center;
+		position: relative;
+	}
+	.login div .login-email::before{
+		content: "";
+	    border-top: 1px solid #ededed;
+	    display: block;
+	    position: absolute;
+	    width: 50px;
+	    top: 10px;
+	    left: 130px;
+	}
+	.login div .login-email::after{
+		content: "";
+	    border-top: 1px solid #ededed;
+	    display: block;
+	    position: absolute;
+	    width: 50px;
+	    top: 10px;
+	    right: 130px;
+	}
+	.login div form{
+		width: 100%;
+		height: 130px;
+		margin: 15px 117px 0 117px;
+	}
+	.login div form input{
+		width: 286px;
+		height: 36px;
+		margin-bottom: 10px;
+		display: inline-block;
+		padding: 0 10px;
+		box-sizing: border-box;
+		font-size: 16px;
+		color: #777；
+		border-radius: 3px;
+		outline: none;
+		border: 1px solid #CCC;
+	}
+	.login div form input[type=submit]{
+		background-color: #EC414D;
+		font-size: 18px;
+		line-height: 36px;
+		color: #fff;
+	}
+	.login div form input[type=submit]:hover{
+		background-color: #E31725;
+	}
+	.login div>a{
+		display: inline-block;
+		width: 70px;
+		height: 19px;
+		margin-left: 117px;
+		margin-top: 10px;
+		color: #9A0000;
+	}
+	.login div>a:hover{
+		text-decoration: underline;
+	}
+	.login div .login-register{
+		display: inline-block;
+		width: 180px;
+		height: 19px;
+		margin-left: 45px;
+		margin-top: 10px;
+		
+	}
+	.login div .login-register a{
+		color: #9A0000;
+	}
+	.login div .login-register a:hover{
+		text-decoration: underline;
+	}
